@@ -1,0 +1,50 @@
+POST localhost:8080/drivers
+Content-Type: application/json
+
+{
+  "firstName": "Карина",
+  "lastName": "Обшарова",
+  "login": "malikarii",
+  "password": "qwerty007"
+
+}
+###
+POST localhost:8080/cars/1
+Content-Type: application/json
+
+{
+  "model": "Audi TT",
+  "color": "red",
+  "carNumber": "ha114l"
+}
+###
+GET localhost:8080/parking
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2Iiwicm9sZSI6IkFETUlOIiwic3RhdGUiOiJDT05GSVJNRUQiLCJsb2dpbiI6Im1hbGlrYSJ9.6rLhnWZthn6tB5aL2PbiK5169z6KVv2y9z5HYbLsM4s
+
+###
+GET localhost:8080/parkingCar/car/1/parking/1
+###
+GET localhost:8080/parkingCar/exit/1
+###
+POST localhost:8080/drivers/signIn
+Content-Type: application/json
+
+{
+  "firstName": "Карина",
+  "lastName": "Карина1",
+  "login": "malika",
+  "password": "qwerty008",
+  "samePassword": "qwerty008",
+  "role" : "ADMIN",
+  "state" : "CONFIRMED"
+
+}
+### пополнить баланс, контролер шлагбаума
+### get token
+POST localhost:8080/drivers
+Content-Type: application/json
+
+{
+  "login": "malika",
+  "password": "qwerty008"
+}
